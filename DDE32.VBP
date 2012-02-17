@@ -1,0 +1,17 @@
+Form=dde32.frm
+ProjWinSize=79,433,202,93
+ProjWinShow=2
+IconForm="Form1"
+Title="MapInfo DDE"
+ExeName32="dde32.exe"
+ExeName="DDE.EXE"
+Name="DDE"
+HelpContextID="0"
+StartMode=0
+VersionCompatible32="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="you & me"

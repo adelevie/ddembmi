@@ -1,0 +1,19 @@
+Include "MapBasic.DEF"           'include the define for CMD_INFO_MSG used below
+
+Declare Sub Main                 'declare the two subroutines
+Declare Sub RemoteMsgHandler
+
+Sub Main                         'main just tells that it has been run
+  Note "DDE message handler installed."
+End Sub                          'after displaying the message, go to sleep
+
+Sub RemoteMsgHandler             'MapInfo calls this subroutine everytime a
+                                 'DDE message comes in with the name of this
+                                 'app as the topic
+  Dim DDEText$ As String         'Define a variable to put the message in
+  DDEText$ = CommandInfo(CMD_INFO_MSG) 'Retrieve the message text
+  Run Command DDEText$           'Ask MapInfo to execute it as a MapBasic
+  Print "Incomming DDE Command..." + chr$(10) + chr$(32) + chr$(34) + DDEText$ + chr$(34)
+                                 'command
+End Sub                          'All done.
+--------------------------------------------------------------
